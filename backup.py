@@ -4,8 +4,8 @@ import datetime
 import schedule
 import time
 
-source_dir = "C:/Python 2.0/filemanipulating"
-destination_dir = "C:/Arduino"
+source_dir = ""
+destination_dir = ""
 
 
 def copy_folder_to_directory(source,dest):
