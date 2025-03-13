@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Default Values{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+</head>
+<body>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+
+                <li>{{ message }}</li>
+
+            {% endfor %}
+
+
+        </ul>
+
+        {% endif %}
+
+    {% endwith %}
+
+{% block content %}{% endblock %}
+<script src="/js/bootstrap.js"></script>
+
+</body>
+</html>
