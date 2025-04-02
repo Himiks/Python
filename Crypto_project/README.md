@@ -30,8 +30,7 @@ Notifications: Telegram bot (using python-telegram-bot library)
 Installation
 To run this project locally, follow these steps:
 
-git clone https://github.com/yourusername/crypto-tracker.git
-
+git clone https://github.com/Himiks/Crypto_project.git
 cd Crypto?project
 
 pip install -r requirements.txt
