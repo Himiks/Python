@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Popular Cryptocurrency Prices</h2>
+        <div class="table-responsive">
+            <table class="custom-table">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="text-center">Crypto</th>
+                        <th class="text-center">Price (USD)</th>
+                    </tr>
+                </thead>
+                <tbody id="crypto-table" class="text-center"></tbody>
+            </table>
+        </div>
+    </div>
+
+
+{% endblock content %}
