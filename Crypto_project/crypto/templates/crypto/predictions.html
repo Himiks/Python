@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <div class="prediction-container">
+        <h2>Cryptocurrency Price Prediction</h2>
+        
+        <form method="POST" class="prediction-form">
+            {% csrf_token %}
+            <label for="crypto">Enter cryptocurrency:</label>
+            <input type="text" id="crypto" name="crypto" required>
+            <button type="submit" class="predict-btn">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <div class="prediction-results">
+                <h3>Prediction for {{ crypto_name }}</h3>
+                
+                <ul>
+                    <li><strong>In 1 day:</strong> ${{ prediction.1day|floatformat:2 }}</li>
+                    <li><strong>In 1 week:</strong> ${{ prediction.1week|floatformat:2 }}</li>
+                    <li><strong>In 1 month:</strong> ${{ prediction.1month|floatformat:2 }}</li> 
+                    
+                 </ul>
+            </div>
+        {% endif %}
+    </div>
+{% endblock content %}

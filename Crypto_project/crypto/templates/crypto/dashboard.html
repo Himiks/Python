@@ -1,0 +1,34 @@
+{% extends "main.html" %}
+
+
+
+{% block content%}
+
+
+<div class="crypto-container">
+    <div class="crypto-table">
+        <h2>Popular Cryptocurrency Prices</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>Coin</th>
+                        <th>Symbol</th>
+                        <th>Price</th>
+                        <th>Market Cap</th>
+                        <th>24h Volume</th>
+                    </tr>
+                </thead>
+                <tbody id="crypto-table"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="crypto-chart">
+      
+        <canvas id="cryptoChart"></canvas> 
+    </div>
+</div>
+
+
+{% endblock content%}

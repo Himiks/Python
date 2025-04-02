@@ -1,0 +1,95 @@
+
+{%load static %}
+
+<nav>
+    <div class="container nav__container">
+        <a href="{%url 'home'%}" class="nav__logo">Crypto</a>
+        <ul class="nav__items">
+            <li><a href="{%url 'predict'%}">Future Prediction</a></li>
+            <li><a href="{%url 'about'%}">About</a></li>
+            <li><a href="{%url 'services'%}">Services</a></li>
+            <li><a href="{%url 'contacts'%}">Contact</a></li>
+            {% if request.user.is_authenticated %}
+            <li class="nav__profile">
+                <a href="{% url 'update-user' %}" class="avatar-link">
+                    <div class="avatar">
+                        <img src="{{ request.user.avatar.url }}" alt="">
+                    </div>
+                </a>
+                <ul>
+                    <li><a href="{%url 'home'%}">Dashboard</a></li>
+                    <li><a href="{%url 'logout'%}">Logout</a></li>
+                </ul>
+                
+            </li>
+            {%else%}
+               <li><a href="{%url 'login'%}">Signin</a></li>
+            {%endif%}
+        </ul>
+        
+        <button id="open__nav-btn"><i class="uil uil-bars"></i></button>
+        <button id="close__nav-btn"><i class="uil uil-multiply"></i></button>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {%load static %}
+
+
+<nav>
+    <div class="container nav__container">
+        <a href="{%url 'home' %}" class="nav__logo">
+            <img src="{%static 'images/avatar1.jpg'%}"/>
+        </a>
+       <ul class="nav__items">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <li class="nav__profile">
+                <div class="avatar">
+                    <img src="<?= ROOT_URL . 'images/' . $avatar['avatar'] ?>" alt="">
+                </div>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Logout</a></li>
+
+                    
+                </ul>
+                
+            </li>
+            <?php else : ?>
+                <li><a href="#">Signin</a></li>
+            <?php endif ?>
+        </ul>
+        
+        <button id="open__nav-btn"><i class="uil uil-bars"></i></button>
+        <button id="close__nav-btn"><i class="uil uil-multiply"></i></button> 
+    </div>
+</nav> {% endcomment %}
