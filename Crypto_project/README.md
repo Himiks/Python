@@ -1,6 +1,9 @@
 Python crypto project 
 This is a cryptocurrency tracker web application built with Django as the backend and Bootstrap + Chart.js for the frontend. The application integrates data from various cryptocurrency APIs CoinGecko and performs machine learning analysis on the data using popular Python libraries such as Scikit-Learn, Pandas, and NumPy. Users can track cryptocurrency prices and receive notifications via a Telegram bot when significant price changes occur.
 
+You can watch how the website look like in project_images folder
+
+
 Features
 Cryptocurrency Tracking: Track up to 10 the most popular cryptocurrencies with real-time price updates from CoinGecko API.
 
@@ -31,7 +34,7 @@ Installation
 To run this project locally, follow these steps:
 
 git clone https://github.com/Himiks/Crypto_project.git
-cd Crypto?project
+cd Crypto_project
 
 pip install -r requirements.txt
 
